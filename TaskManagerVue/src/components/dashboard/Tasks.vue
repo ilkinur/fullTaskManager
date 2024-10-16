@@ -95,7 +95,7 @@
       :currentPage="currentPage"
       @pagechanged="onPageChange"
     />
-    <modal name="delete" height="auto" styles="background-color: transparent; width:500px!important">
+    <modal name="delete" :widht="500" height="auto" styles="background-color: transparent; width:500px!important">
       <div class="modal-dialog modal-dialog-centered" style="margin: 0!important; width: 100%!important;">
             <div class="modal-content">
                 <div class="modal-header">
