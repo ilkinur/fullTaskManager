@@ -43,7 +43,7 @@
 
       </div>
         <button type="submit" class="btn btn-primary mt-4" :disabled="loading">
-          Yaddaşa yaz
+          Save
         </button>
       </form>
     </div>

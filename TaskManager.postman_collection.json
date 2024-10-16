@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "5d6a770b-4f9f-433b-b66d-ff661d65d6ca",
+		"name": "TaskManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11305607"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ilkinur",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ilkinur@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.32.57.40/api/register",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "OPTIONS",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "ilkinur@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.32.57.40/api/login",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90YXNrbWFuYWdlci5sb2NhbFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyODc0NTAyNCwiZXhwIjoxNzI4NzQ4NjI0LCJuYmYiOjE3Mjg3NDUwMjQsImp0aSI6ImU1bVRMSnNIdVRubmthUmwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vVcnhCBfCGWQFwxsvswRMAsc9xAoWvtTqWuJR20x1ak",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.32.57.40/api/profile",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90YXNrbWFuYWdlci5sb2NhbFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyODczMTc3OSwiZXhwIjoxNzI4NzM1MzgwLCJuYmYiOjE3Mjg3MzE3ODAsImp0aSI6Ik1sVXowNjZUbWM0aXpteWsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mWCWHv2rpaZQMDdOibjztAmFx4FxYY433x9DMgDk2T0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://34.32.57.40/api/refresh",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90YXNrbWFuYWdlci5sb2NhbFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyODczMTc3OSwiZXhwIjoxNzI4NzM1MzgwLCJuYmYiOjE3Mjg3MzE3ODAsImp0aSI6Ik1sVXowNjZUbWM0aXpteWsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mWCWHv2rpaZQMDdOibjztAmFx4FxYY433x9DMgDk2T0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.32.57.40/api/logout",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90YXNrbWFuYWdlci5sb2NhbFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyODczODg4MiwiZXhwIjoxNzI4NzQyNDgyLCJuYmYiOjE3Mjg3Mzg4ODIsImp0aSI6IjJjeklEb09nRDBWVGhVQlUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vKwAk8v_6DSLEa5L9P6TJp4Pyu8mptnGaYZ1PER8CbY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.32.57.40/api/task",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90YXNrbWFuYWdlci5sb2NhbFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyODczODg4MiwiZXhwIjoxNzI4NzQyNDgyLCJuYmYiOjE3Mjg3Mzg4ODIsImp0aSI6IjJjeklEb09nRDBWVGhVQlUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vKwAk8v_6DSLEa5L9P6TJp4Pyu8mptnGaYZ1PER8CbY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test edirik",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "10.11.2023",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.32.57.40/api/task",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90YXNrbWFuYWdlci5sb2NhbFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyODczODg4MiwiZXhwIjoxNzI4NzQyNDgyLCJuYmYiOjE3Mjg3Mzg4ODIsImp0aSI6IjJjeklEb09nRDBWVGhVQlUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vKwAk8v_6DSLEa5L9P6TJp4Pyu8mptnGaYZ1PER8CbY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "test",
+							"value": "sdsd",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.32.57.40/api/taskDelete",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"taskDelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90YXNrbWFuYWdlci5sb2NhbFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyODczODg4MiwiZXhwIjoxNzI4NzQyNDgyLCJuYmYiOjE3Mjg3Mzg4ODIsImp0aSI6IjJjeklEb09nRDBWVGhVQlUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vKwAk8v_6DSLEa5L9P6TJp4Pyu8mptnGaYZ1PER8CbY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "test4",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "teest edd",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "10.11.2024",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.32.57.40/api/taskUpdate",
+					"protocol": "http",
+					"host": [
+						"34",
+						"32",
+						"57",
+						"40"
+					],
+					"path": [
+						"api",
+						"taskUpdate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
