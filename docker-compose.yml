@@ -1,0 +1,66 @@
+version: '1.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel_app
+    volumes:
+      - ./TaskManagerBack:/var/www/TaskManagerBack
+    ports:
+      - "9000:9000"
+    networks:
+      - app-network
+    depends_on:
+      - postgres
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./TaskManagerBack:/var/www/TaskManagerBack
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - app-network
+    depends_on:
+      - app
+      - postgres
+
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_DB: task_manager
+      POSTGRES_USER: ilkin
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
+    ports:
+      - "5432:5432"
+
+  vue:
+    build:
+      context: .
+      dockerfile: ./TaskManagerVue/Dockerfile
+    container_name: vue_app
+    volumes:
+      - ./TaskManagerVue:/app
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    depends_on:
+      - app
+
+volumes:
+  pgdata:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,12 @@
+.no-padding{
+    padding: 0;
+}
+.mr-1{
+    margin-right: 5px;
+}
+.ml-1{
+    margin-left: 5px;
+}
+.white-text{
+    color: #fff!important;
+}
