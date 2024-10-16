@@ -96,7 +96,7 @@
       @pagechanged="onPageChange"
     />
     <modal name="delete" height="auto" styles="background-color: transparent">
-      <div class="modal-dialog modal-dialog-centered" style="margin: 0!important; width: 600px!important;">
+      <div class="modal-dialog modal-dialog-centered" style="margin: 0!important; max-width: 600px!important;">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title  fw-bold" id="expeditLabel">Are you sure you want to delete?</h5>
