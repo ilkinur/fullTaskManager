@@ -29,6 +29,7 @@ services:
     depends_on:
       - app
       - postgres
+      - vue
 
   postgres:
     image: postgres:13
@@ -50,7 +51,7 @@ services:
       dockerfile: ./TaskManagerVue/Dockerfile
     container_name: vue_app
     volumes:
-      - ./TaskManagerVue:/app
+      - ./TaskManagerVue:/app/TaskManagerVue
     ports:
       - "8080:8080"
     networks:
