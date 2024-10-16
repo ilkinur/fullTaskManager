@@ -60,7 +60,7 @@ Then up all containers with docker.
 
 Then write on terminal
 
-·         cp TaskManagerBack/.env.example .env
+·         cp TaskManagerBack/.env.example TaskManagerBack/.env
 
 If all containers upped successfully then write on terminal
 
